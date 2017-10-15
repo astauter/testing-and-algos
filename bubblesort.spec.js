@@ -9,10 +9,12 @@ describe('Bubble Sort', () => {
         let unsortedArray = [];
         let i = 0;
         while (i < 11) {
-            unsortedArray.push(Math.ceil(Math.random * 10 * (Math.random * 5)))
+            unsortedArray.push(Math.ceil(Math.random() * 10 * (Math.random() * 5)))
             i++
         }
-        expect(bubbleSort(unsortedArray)).toEqual(unsortedArray.sort())
+        let sorted = unsortedArray.slice(0).sort((a, b) => { return a - b });
+
+        expect(bubbleSort(unsortedArray)).toEqual(sorted)
     })
     it('calls swap a certain amount of times', () => {
         spyOn(window, 'swap').and.callThrough();
