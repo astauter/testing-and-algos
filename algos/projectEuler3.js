@@ -35,4 +35,3 @@ function isPrime(num) {
     }
     return true;
 }
-console.log(largestPrimeFactor(600851475143))
