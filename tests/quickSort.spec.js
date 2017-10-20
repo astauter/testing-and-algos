@@ -8,6 +8,7 @@ describe('quick sort', () => {
     it('sorts an array', () => {
         expect(quickSort([1])).toEqual([1]);
         expect(quickSort([9, 3, 1])).toEqual([1, 3, 9]);
+        expect(quickSort([2, 1, 4, 65])).toEqual([1, 2, 4, 65]);
         expect(quickSort([1, 4, 6, 1, 4, 2])).toEqual([1, 1, 2, 4, 4, 6]);
         let unsortedArray = [];
         let i = 0;
